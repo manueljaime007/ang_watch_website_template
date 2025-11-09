@@ -1,0 +1,48 @@
+@use "../../../scss/main" as *;
+
+section {
+  display: grid;
+  place-items: center;
+
+  div.content {
+    width: 100%;
+    height: 300px;
+    background: #f6ebc9;
+    border-radius: $border-radius-xl;
+    @include apply-padding($padding-xxl, $padding-lg);
+
+    @include flex-column-center;
+    text-align: center;
+    gap: $spacing-md;
+
+    h2 {
+      font-size: $text-xxl;
+    }
+    p {
+      font-size: $text-md;
+      opacity: 0.8;
+    }
+
+    div {
+      margin-top: 1rem;
+      @include flex-center;
+      gap: $spacing-md;
+
+      a {
+        border-radius: $border-radius-md;
+        font-size: $text-md;
+        @include apply-padding($padding-sm, $padding-lg);
+
+        &.btn-primary {
+          @include primary-btn;
+        }
+
+
+      }
+
+      @include respond-to(sm) {
+        // @include flex-column;
+      }
+    }
+  }
+}

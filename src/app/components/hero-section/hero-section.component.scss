@@ -1,0 +1,70 @@
+@use "../../../scss/main" as *;
+
+section {
+  position: relative;
+
+  div.img {
+    width: 100%;
+    height: 500px;
+    border-radius: $border-radius-xl;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: $border-radius-xl;
+    }
+
+    @include respond-to(sm) {
+      height: 350px;
+    }
+  }
+
+  div.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: $text-white;
+    background: $overlay;
+    border-radius: $border-radius-xl;
+    @include apply-padding($padding-sm, $padding-lg);
+
+    @include flex-column-center;
+    text-align: center;
+    gap: $spacing-md;
+
+    h2{
+      font-size: $text-xxl;
+    }
+    p {
+      font-size: $text-md;
+      opacity: 0.8;
+    }
+
+    div {
+      margin-top: 1rem;
+      @include flex-center;
+      gap: $spacing-md;
+
+      a {
+        border-radius: $border-radius-md;
+        font-size: $text-md;
+        @include apply-padding($padding-sm, $padding-lg);
+
+        &.btn-primary {
+          @include primary-btn;
+        }
+
+        &.btn-secondary {
+          @include secondary-btn;
+        }
+      }
+
+      @include respond-to(sm) {
+        // @include flex-column;
+      }
+    }
+  }
+}

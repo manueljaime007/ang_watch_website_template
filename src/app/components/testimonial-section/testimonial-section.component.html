@@ -1,0 +1,19 @@
+<section>
+  <div class="content">
+    <h2>{{ title }}</h2>
+    <p>{{ text }}</p>
+  </div>
+  <div class="testimonials">
+    @for(testimonial of testimonials; track testimonial.id){
+    <li>
+      <div>
+        @for(star of getStars(testimonial.starsCount); track $index) {
+        <i class="fa-solid fa-star"></i>
+        }
+      </div>
+      <p>"{{ testimonial.text }}"</p>
+      <h4> - {{ testimonial.author }}</h4>
+    </li>
+    }
+  </div>
+</section>

@@ -1,0 +1,67 @@
+@use "../../../scss/main.scss" as *;
+
+section {
+  @include flex-column-center;
+  gap: 2rem;
+  text-align: center;
+
+  .content {
+    h2 {
+      font-size: $text-xxl;
+    }
+    p {
+      text-align: center;
+      line-height: $line-height-loose;
+      font-size: $text-md;
+      margin-block: 1rem;
+
+      @include respond-to(sm) {
+        width: 90%;
+      }
+    }
+  }
+
+  .features {
+    @include flex-center;
+    gap: 2rem;
+    li {
+      width: calc(100% / 4);
+      border-radius: $border-radius-md;
+      background-color: #f3f4f6;
+      @include apply-padding($padding-lg, $padding-md);
+      @include flex-column-center;
+      gap: 1rem;
+    }
+
+    span {
+      margin-bottom: 0.5rem;
+      height: 80px;
+      width: 80px;
+      display: grid;
+      place-items: center;
+      background: #f1e7c8;
+      border-radius: $border-radius-full;
+      // @include apply-padding($padding-md, $padding-md);
+
+      i {
+        font-size: $text-xxl;
+        color: $text-primary;
+      }
+    }
+
+    h3 {
+    }
+    p {
+      font-size: $text-sm;
+      width: 80%;
+    }
+
+    @include respond-to(sm){
+      @include flex-column-center;
+
+      li{
+        width: 100%;
+      }
+    }
+  }
+}

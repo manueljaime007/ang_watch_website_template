@@ -1,0 +1,18 @@
+<section id="features">
+  <div class="content">
+    <h2>{{ title }}</h2>
+    <p>{{ text }}</p>
+  </div>
+
+  <div class="features">
+    @for (feature of featuresList; track feature.id) {
+    <li>
+      <span>
+        <i class="{{ feature.icon_class }}"></i>
+      </span>
+      <h3>{{ feature.subtitle }}</h3>
+      <p>{{ feature.body }}</p>
+    </li>
+    }
+  </div>
+</section>

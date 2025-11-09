@@ -1,0 +1,60 @@
+@use "../../../scss/main.scss" as *;
+
+section {
+  @include flex-column-center;
+  gap: 2rem;
+
+  .content {
+    text-align: center;
+    h2 {
+      font-size: $text-xxl;
+    }
+    p {
+      line-height: $line-height-loose;
+      font-size: $text-md;
+      margin-block: 1rem;
+
+      @include respond-to(sm) {
+        width: 90%;
+      }
+    }
+  }
+
+  .testimonials {
+    @include flex-center;
+    gap: 2rem;
+
+    li {
+      width: calc(100% / 3);
+      border-radius: $border-radius-md;
+      background-color: #f3f4f6;
+
+      @include apply-padding($padding-lg, $padding-md);
+      // @include flex-column-center;
+
+      div {
+        i {
+          font-size: $text-lg;
+          color: $text-primary;
+        }
+      }
+
+      p {
+        margin: 1rem 0;
+        font-size: $text-sm;
+        font-style: italic;
+      }
+
+      h4 {
+      }
+    }
+
+    @include respond-to(sm) {
+      @include flex-column-center;
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+}
