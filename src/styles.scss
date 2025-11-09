@@ -19,6 +19,9 @@ body {
   padding-inline: 5%;
 
   main{
-    padding-top: 10rem;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
   }
 }

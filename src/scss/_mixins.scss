@@ -5,7 +5,7 @@
 // =======================
 @mixin header-style {
   background: $bg-light;
-  z-index: 9999;
+  z-index: $z-header;
   display: flex;
   position: fixed;
   top: 0;
