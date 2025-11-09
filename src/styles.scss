@@ -23,7 +23,7 @@ body {
     padding-top: 8rem;
     display: flex;
     flex-direction: column;
-    gap: 7rem;
+    gap: 5rem;
   }
   @include respond-to(sm) {
     padding-inline: 4%;

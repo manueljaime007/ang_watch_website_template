@@ -1,0 +1,81 @@
+@use "../../../scss/main.scss" as *;
+
+footer {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .link {
+    margin-bottom: 1rem;
+  }
+  div a.logo {
+    margin-bottom: 1rem;
+    color: $text-black;
+    i {
+      color: $text-primary;
+    }
+  }
+  div.links li a {
+    margin-block: 4rem;
+  }
+  div h4 {
+    margin-bottom: 1rem;
+  }
+
+  div li a {
+    color: $text-black;
+  }
+
+  #social_media {
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include respond-to(sm) {
+      text-align: start;
+    }
+    div {
+      display: flex;
+      gap: 1rem;
+      li a {
+        margin: 0.5rem 0;
+        i {
+          font-size: $text-xxl;
+
+          &:hover {
+            color: $text-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    @include flex-between;
+    align-items: start;
+
+    @include respond-to(sm) {
+      flex-direction: column;
+    }
+  }
+
+  .copy {
+    @include apply-padding($padding-lg, $padding-lg);
+    border-top: 0.9px solid rgba(0, 0, 0, 0.4);
+    p {
+      text-align: center;
+      opacity: 0.8;
+      font-size: $text-sm;
+    }
+  }
+
+  @include respond-to(sm) {
+    h4 {
+      margin: 1rem 0;
+    }
+    .link {
+      margin-bottom: 1rem;
+    }
+  }
+}

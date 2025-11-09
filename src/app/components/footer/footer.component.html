@@ -1,1 +1,51 @@
-<p>footer works!</p>
+<footer>
+  <section class="content">
+    <div>
+      <a href="#" class="logo">
+        <h1>
+          <span>
+            <i class="fas fa-clock"></i>
+          </span>
+          {{ LOGO }}
+        </h1>
+      </a>
+      <p>{{ logo_text }}</p>
+    </div>
+
+    <div class="links">
+      <h4>Quick Links</h4>
+      @for(link of nav_links; track link.id){
+      <li>
+        <a href="{{ link.path }}">{{ link.text }}</a>
+      </li>
+      }
+    </div>
+    <div class="links">
+      <h4>Legal</h4>
+      @for(link of legal_links; track link.id){
+      <li>
+        <a href="{{ link.path }}" class="link">{{ link.text }}</a>
+      </li>
+      }
+    </div>
+    <div id="social_media">
+      <h4>Follow Us</h4>
+      <div>
+        @for(link of social_links; track link.id){
+        <li>
+          <a href="{{ link.link }}">
+            <i class="{{ link.brand }}"></i>
+          </a>
+        </li>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="copy">
+    <p>
+      <i class="fas fa-copyright"></i>
+      {{ copy_text }}
+    </p>
+  </section>
+</footer>
