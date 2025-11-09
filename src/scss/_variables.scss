@@ -1,25 +1,38 @@
 // =======================
 // CORES
 // =======================
-$light-bg: #f8f8f6;
-$dark-bg: #221d10;
-$primary-color: #ecb613;
+$bg-light: #f8f8f6;
+
+$bg-dark: #221d10;
+
+$bg-primary: #ecb613;
+
 $text-black: #1f1f1f;
+$text-white: #f8f8f6;
+$text-primary: #ecb613;
+
+$overlay: rgba(0, 0, 0, 0.8);
 
 // =======================
 // TIPOGRAFIA
 // =======================
-$text-md: 0.9rem;
-$font-base: 'Arial', sans-serif;
-$font-heading: 'Helvetica Neue', sans-serif;
+$text-xs: 0.75rem; // 12px
+$text-sm: 0.85rem; // 14px
+$text-md: 0.9rem; // o teu padrão
+$text-lg: 1.1rem; // 18px
+$text-xl: 1.4rem; // 22px
+$text-xxl: 2rem;
+
+$font-base: "Arial", sans-serif;
+$font-heading: "Helvetica Neue", sans-serif;
 
 // =======================
 // BREAKPOINTS
 // =======================
-$breakpoint-sm: 691px;   // celular pequeno
-$breakpoint-md: 768px;   // tablet
-$breakpoint-lg: 992px;   // desktop pequeno
-$breakpoint-xl: 1200px;  // desktop grande
+$breakpoint-sm: 691px; // celular pequeno
+$breakpoint-md: 768px; // tablet
+$breakpoint-lg: 992px; // desktop pequeno
+$breakpoint-xl: 1200px; // desktop grande
 
 // =======================
 // ESPAÇAMENTOS
@@ -36,4 +49,32 @@ $spacing-xl: 32px;
 $border-radius-sm: 4px;
 $border-radius-md: 8px;
 $border-radius-lg: 12px;
-$box-shadow-sm: 0 0 1px rgba(0,0,0,0.3);
+$border-radius-xl: 16px;
+
+$box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.15);
+$box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+$box-shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+// ==========================================
+// ⚙️ LAYOUT
+// ==========================================
+$container-width: 1200px;
+$navbar-height: 70px;
+$z-header: 100;
+$z-modal: 1000;
+$z-overlay: 999;
+
+// 🧩 Padding scale
+$padding-xxs: 0.25rem; // 4px
+$padding-xs: 0.5rem; // 8px
+$padding-sm: 0.75rem; // 12px
+$padding-md: 1rem; // 16px
+$padding-lg: 1.5rem; // 24px
+$padding-xl: 2rem; // 32px
+$padding-xxl: 3rem; // 48px
+
+// 📦 Padding helpers
+$section-padding-y: 4rem; // padding vertical padrão em secções
+$section-padding-x: 2rem; // padding horizontal padrão
+$container-padding: 1.5rem; // espaçamento interno comum de containers
+$button-padding: 0.7rem 1.2rem; // padding padrão de botões

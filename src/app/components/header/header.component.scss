@@ -7,7 +7,7 @@ header {
     color: $text-black;
 
     span {
-      color: $primary-color;
+      color: $bg-primary;
     }
   }
 
@@ -25,7 +25,7 @@ header {
         // @include transition(); // efeito suave ao hover
 
         &:hover {
-          color: $primary-color;
+          color: $bg-primary;
         }
       }
     }
@@ -73,8 +73,6 @@ header {
       &.isOpen {
         display: initial;
       }
-
-   
 
       ul {
         @include flex-column;

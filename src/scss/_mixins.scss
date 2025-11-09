@@ -1,11 +1,11 @@
 @use "variables.scss" as *;
 
-
 // =======================
 // HEADER
 // =======================
 @mixin header-style {
-  background: transparent;
+  background: $bg-light;
+  z-index: 9999;
   display: flex;
   position: fixed;
   top: 0;
@@ -13,8 +13,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: .6rem 5%;
-  box-shadow: 0 0 1px rgba(0,0,0,.3);
+  padding: 0.6rem 5%;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 // =======================
@@ -22,13 +22,21 @@
 // =======================
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
-    @media (max-width: $breakpoint-sm) { @content; }
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
   } @else if $breakpoint == md {
-    @media (max-width: $breakpoint-md) { @content; }
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
   } @else if $breakpoint == lg {
-    @media (max-width: $breakpoint-lg) { @content; }
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
   } @else if $breakpoint == xl {
-    @media (max-width: $breakpoint-xl) { @content; }
+    @media (max-width: $breakpoint-xl) {
+      @content;
+    }
   }
 }
 
@@ -48,9 +56,17 @@
 }
 
 @mixin flex-column {
-  flex-direction: column;
+  display: flex;
   justify-content: initial;
   align-items: initial;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 // =======================
@@ -63,4 +79,26 @@
 @mixin box($shadow: $box-shadow-sm, $radius: $border-radius-md) {
   box-shadow: $shadow;
   border-radius: $radius;
+}
+
+// =======================
+// BOTÕES
+// =======================
+@mixin primary-btn() {
+  background: $bg-primary;
+  color: $text-black;
+}
+
+@mixin secondary-btn() {
+  background: rgba(255, 255, 255, 0.3);
+  color: $text-white;
+  font-size: $text-md;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+// =======================
+// PADDING HELPER
+// =======================
+@mixin apply-padding($y: $padding-md, $x: $padding-md) {
+  padding: $y $x;
 }
