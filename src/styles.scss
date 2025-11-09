@@ -13,6 +13,8 @@
 }
 
 body {
+  width: 100%;
+  height: 100dvh;
+  background: $light-bg;
   padding-inline: 5%;
-  background: $primary-color;
 }

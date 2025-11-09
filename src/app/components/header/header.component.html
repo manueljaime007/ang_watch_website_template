@@ -1,6 +1,11 @@
 <header>
   <a href="#" class="logo">
-    <h1>{{ LOGO }}</h1>
+    <h1>
+      <span>
+        <i class="fas fa-clock"></i>
+      </span>
+      {{ LOGO }}
+    </h1>
   </a>
   <nav>
     <ul>
@@ -10,8 +15,11 @@
       <li><a href="#">Gallery</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
-    <div>
-      <button type="button">
+    <div class="header-buttons">
+      <button id="toggle-theme-button" type="button">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button id="toggle-menu-button">
         <i class="fas fa-bars"></i>
       </button>
     </div>

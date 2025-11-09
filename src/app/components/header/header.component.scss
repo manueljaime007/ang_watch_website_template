@@ -1,34 +1,46 @@
+@use "../../../scss/main.scss" as *;
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 1rem 5%;
+  @include header-style;
 
   a.logo{
-    h1{
-
+    color: $text-black;
+    span{
+      color: $primary-color;
     }
+
   }
 
   nav {
-    gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
     ul {
-      gap: 1rem;
+      display: flex;
+      gap: 1.5rem;
 
       li a {
-        color: #1f1f1f;
+        color: $text-black;
       }
+    }
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: 2rem;
+
+    #toggle-theme-button {
+      padding: 0.7rem 1rem;
+      background: #e5e7eb;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #toggle-menu-button {
+      display: none;
     }
   }
 }
 
 /* COMMON STYLES*/
-header,
-nav,
-ul {
-  display: flex;
-}
