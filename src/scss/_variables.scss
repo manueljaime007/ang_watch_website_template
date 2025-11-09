@@ -1,4 +1,39 @@
+// =======================
+// CORES
+// =======================
 $light-bg: #f8f8f6;
-$dark-bg: #1f1f1f;
+$dark-bg: #221d10;
 $primary-color: #ecb613;
 $text-black: #1f1f1f;
+
+// =======================
+// TIPOGRAFIA
+// =======================
+$text-md: 0.9rem;
+$font-base: 'Arial', sans-serif;
+$font-heading: 'Helvetica Neue', sans-serif;
+
+// =======================
+// BREAKPOINTS
+// =======================
+$breakpoint-sm: 691px;   // celular pequeno
+$breakpoint-md: 768px;   // tablet
+$breakpoint-lg: 992px;   // desktop pequeno
+$breakpoint-xl: 1200px;  // desktop grande
+
+// =======================
+// ESPAÇAMENTOS
+// =======================
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// =======================
+// BORDAS E SOMBRAS
+// =======================
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$box-shadow-sm: 0 0 1px rgba(0,0,0,0.3);

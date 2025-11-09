@@ -1,4 +1,11 @@
+@use "variables.scss" as *;
+
+
+// =======================
+// HEADER
+// =======================
 @mixin header-style {
+  background: transparent;
   display: flex;
   position: fixed;
   top: 0;
@@ -6,5 +13,54 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 5%;
+  padding: .6rem 5%;
+  box-shadow: 0 0 1px rgba(0,0,0,.3);
+}
+
+// =======================
+// RESPONSIVIDADE
+// =======================
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) { @content; }
+  }
+}
+
+// =======================
+// FLEX UTILITIES
+// =======================
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+}
+
+// =======================
+// TRANSIÇÕES E BOX
+// =======================
+@mixin transition($property: all, $duration: 0.3s, $ease: ease-in-out) {
+  transition: $property $duration $ease;
+}
+
+@mixin box($shadow: $box-shadow-sm, $radius: $border-radius-md) {
+  box-shadow: $shadow;
+  border-radius: $radius;
 }

@@ -7,21 +7,22 @@
       {{ LOGO }}
     </h1>
   </a>
-  <nav>
+  <nav [class.isOpen]="isMenuOpen">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Features</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">Contact</a></li>
+      @for (navlink of NAV_LINKS; track navlink.id) {
+      <li>
+        <a href="{{ navlink.path }}">{{ navlink.text }}</a>
+      </li>
+      }
     </ul>
-    <div class="header-buttons">
-      <button id="toggle-theme-button" type="button">
-        <i class="fas fa-moon"></i>
-      </button>
-      <button id="toggle-menu-button">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
   </nav>
+  <div class="header-buttons">
+    <button id="toggle-theme-button" type="button">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <button id="toggle-menu-button" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
 </header>

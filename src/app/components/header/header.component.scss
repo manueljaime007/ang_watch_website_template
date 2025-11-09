@@ -3,44 +3,83 @@
 header {
   @include header-style;
 
-  a.logo{
+  a.logo {
     color: $text-black;
-    span{
+
+    span {
       color: $primary-color;
     }
-
   }
 
   nav {
-    display: flex;
-    align-items: center;
+    @include flex-between; // substitui display:flex + align + justify
     gap: 1.5rem;
 
     ul {
-      display: flex;
+      @include flex-between;
       gap: 1.5rem;
 
       li a {
         color: $text-black;
+        font-size: $text-md;
+        // @include transition(); // efeito suave ao hover
+
+        &:hover {
+          color: $primary-color;
+        }
       }
     }
   }
 
   .header-buttons {
-    display: flex;
-    gap: 2rem;
+    @include flex-center; // centraliza verticalmente os botões
+    gap: 1rem;
+
+    button {
+      padding: 0.7rem 1rem;
+      border: none;
+      background-color: none;
+    }
 
     #toggle-theme-button {
-      padding: 0.7rem 1rem;
       background: #e5e7eb;
-      border: none;
-      border-radius: 5px;
+      @include box($box-shadow-sm, $border-radius-sm); // sombra + border-radius
+      @include transition();
     }
 
     #toggle-menu-button {
       display: none;
+      @include respond-to(sm) {
+        display: block; // aparece em telas menores
+      }
     }
   }
-}
 
-/* COMMON STYLES*/
+  // RESPONSIVIDADE DO HEADER
+  @include respond-to(sm) {
+    // flex-direction: column; // nav e botões empilham
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background: #e5e7eb;
+      padding: 2rem 1rem;
+      @include flex-column;
+
+      display: none;
+
+      &.isOpen {
+        display: initial;
+      }
+
+   
+
+      ul {
+        @include flex-column;
+      }
+    }
+    padding: 1rem 5%;
+  }
+}
