@@ -9,13 +9,12 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   LOGO = 'LUX';
 
-
   NAV_LINKS = [
-    { id: 1, path: '#', text: 'Home' },
-    { id: 2, path: '#', text: 'About' },
-    { id: 3, path: '#', text: 'Features' },
-    { id: 4, path: '#', text: 'Gallery' },
-    { id: 5, path: '#', text: 'Contact' },
+    { id: 1, path: '#hero', text: 'Home' },
+    { id: 2, path: '#about', text: 'About' },
+    { id: 3, path: '#features', text: 'Features' },
+    { id: 4, path: '#gallery', text: 'Gallery' },
+    { id: 5, path: '#contact', text: 'Contact' },
   ];
 
   isMenuOpen = false;

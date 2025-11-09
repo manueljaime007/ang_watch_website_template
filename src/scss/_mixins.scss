@@ -13,8 +13,12 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0.6rem 5%;
+  padding: 0.6rem 2%;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+
+  @include respond-to(sm){
+    padding-inline: 4%;
+  }
 }
 
 // =======================
