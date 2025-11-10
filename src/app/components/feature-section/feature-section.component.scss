@@ -22,10 +22,17 @@ section {
   }
 
   .features {
-    @include flex-center;
+    // @include flex-center;
+    display: grid;
     gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include respond-to(lg){
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     li {
-      width: calc(100% / 4);
+      width: calc(100%);
       border-radius: $border-radius-md;
       background-color: #f3f4f6;
       @include apply-padding($padding-lg, $padding-md);
@@ -56,10 +63,10 @@ section {
       width: 80%;
     }
 
-    @include respond-to(sm){
+    @include respond-to(sm) {
       @include flex-column-center;
 
-      li{
+      li {
         width: 100%;
       }
     }

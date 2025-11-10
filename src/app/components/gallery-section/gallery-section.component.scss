@@ -4,7 +4,6 @@ section {
   @include flex-column-center;
   gap: 2rem;
   text-align: center;
-
   .content {
     h2 {
       font-size: $text-xxl;
@@ -25,10 +24,17 @@ section {
     gap: 0.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 6rem;
+
+    @include respond-to(md){
+      padding: 2rem;
+    }
+
 
     #single_image {
       border-radius: $border-radius-md;
       overflow: hidden;
+      height: 100%;
       img {
         width: calc(100%);
         height: 100%;
@@ -42,18 +48,19 @@ section {
     }
     .group_image {
       gap: 0.5rem;
-      height: 100%;
+      // height: 100%;
       grid-template-columns: repeat(2, 1fr);
       display: grid;
 
       div {
+        overflow: hidden;
         border-radius: $border-radius-md;
         width: fit-content;
-        overflow: hidden;
         img {
           width: calc(100%);
-          height: 100%;
+          // height: 100%;
           @include transition;
+          border-radius: $border-radius-md;
 
           &:hover {
             scale: 1.1;
